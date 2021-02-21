@@ -4,19 +4,21 @@
 
 <ol>
   {{#each burgers}}
-    <li>{{burger_name}}</li>
+      {{#unless devoured}}
+          <li>{{burger_name}}</li>
+    {{/unless}}
   {{/each}}
 </ol>
 
-{{!-- <h2>Devoured Burgers</h2> --}}
+<h2>Devoured Burgers</h2>
 
-{{!-- <ol>
+<ol>
   {{#each burgers}}
     {{#if devoured}}
-      {{> burgers/burger-block devourered=false}}
+          <li>{{burger_name}}</li>
     {{/if}}
   {{/each}}
-</ol> --}}
+</ol>
 
 <h2>Add a Burger</h2>
 <form class="create-form">
