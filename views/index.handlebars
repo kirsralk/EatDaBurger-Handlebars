@@ -4,10 +4,11 @@
 
 <ol>
   {{#each burgers}}
+    <li>{{burger_name}}</li>
   {{/each}}
 </ol>
 
-<h2>Devoured Burgers</h2>
+{{!-- <h2>Devoured Burgers</h2> --}}
 
 {{!-- <ol>
   {{#each burgers}}
@@ -21,7 +22,6 @@
 <form class="create-form">
 
   <div class="form-group">
-    <label for="newBurg">Cat Name:</label>
     <input type="text" id="newBurg" name="name">
   </div>
 
