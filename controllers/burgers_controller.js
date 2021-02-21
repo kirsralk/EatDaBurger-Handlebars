@@ -3,4 +3,4 @@ var burger = require("../models/burger.js");
 
 var router = express.Router();
 
-modules.exports = router;
+module.exports = router;
