@@ -49,7 +49,7 @@ var orm = {
         });
     },
     update: function (table, objColVals, condition, cb) {
-        var queryString = "UPDATE " + table + " SET " + objToSql(objColVals) + " WHERE " + condition + " ;";
+        var queryString = "UPDATE " + table + " SET devoured=1 WHERE " + condition + " ;";
 
         console.log(queryString);
         connection.query(queryString, function(err, result) {

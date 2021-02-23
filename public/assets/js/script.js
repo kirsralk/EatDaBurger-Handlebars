@@ -4,9 +4,24 @@
 // });
 
 $(document).ready(function () {
-  alert("hello");
+//   alert("hello");
 
-  $(".devour-burger").on("click", function (event) {
+$(".devour-burger").on("click", function (event) {
     alert("this button worked");
+    var id = $(this).data("id");
+    var newDevour = $(this).data("newDevour");
+
+    var newDevState = {
+        devoured: newDevour
+    };
+
+    $.ajax("api/burgers/" + id, {
+        type: "PUT",
+        data: newDevState
+    }).then(
+        function() {
+            location.reload();
+        }
+    );
   });
 }); //end entire call
