@@ -2,6 +2,17 @@
 const { query } = require("../config/connection.js");
 var connection = require("../config/connection.js");
 
+// Helper function for SQL syntax
+function printQuestionMarks(num) {
+  var arr = [];
+
+  for (var i = 0; i < num; i++) {
+    arr.push("?");
+  }
+
+  return arr.toString();
+}
+
 function selectAll() {
     
 };
@@ -48,6 +59,19 @@ var orm = {
             cb (result);
         });
     },
+    create: function(table, cols, vals, cb) {
+        var queryString = "INSERT INTO " + table + " (" + cols.toString(); 
+        queryString += ") VALUES (" + printQuestionMarks(vals.length) + ");";
+
+        console.log("queryString");
+
+        connection.query(queryString, vals, function(err,result) {
+          if (err) {
+            throw err;
+          }
+          cb(result);
+        });
+      },
     update: function (table, objColVals, condition, cb) {
         var queryString = "UPDATE " + table + " SET devoured=1 WHERE " + condition + " ;";
 
@@ -59,6 +83,7 @@ var orm = {
             cb(result);
         });
     } //, then next function
+
 }; // end orm variable
 
 module.exports = orm;
