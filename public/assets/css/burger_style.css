@@ -1,0 +1,22 @@
+body {
+    background-color: rgb(243, 212, 34) !important;
+}
+
+table {
+    border-spacing: 10px;
+    padding: 20px;
+}
+
+th, td {
+    padding: 10px
+}
+
+.red-title{
+    color: red;
+}
+
+.burgersize {
+    max-width: 153px !important;
+    height: auto;
+    margin: 0px auto;
+}
