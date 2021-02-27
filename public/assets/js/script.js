@@ -7,7 +7,7 @@ $(document).ready(function () {
 //   alert("hello");
 
 $(".devour-burger").on("click", function (event) {
-    alert("this button worked");
+    // alert("this button worked");
     var id = $(this).data("id");
     var newDevour = $(this).data("newDevour");
 

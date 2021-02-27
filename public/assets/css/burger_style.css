@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(243, 212, 34) !important;
+    background-color: #f2c844 !important;
 }
 
 table {
@@ -19,4 +19,23 @@ th, td {
     max-width: 153px !important;
     height: auto;
     margin: 0px auto;
+    padding-top: 20px;
+}
+
+.whitebg {
+    background-color: white !important;
+}
+
+.eaten {
+    color: grey;
+    background-color: lightgray !important;
+    border-spacing: 10px !important;
+}
+
+.noborder {
+    border: none !important;
+}
+
+.spacer {
+    padding-top: 20px;
 }
