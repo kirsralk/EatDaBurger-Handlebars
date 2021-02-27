@@ -11,7 +11,7 @@ Eat-Da-Burger is a fun database app that allows users to create a list of burger
 
 * App Screenshot:
 
-![App Screenshot](public\assets\img\screenshot.gif)
+![App Screenshot](/assets/img/screenshot.gif)
 
 ### User Story
 
